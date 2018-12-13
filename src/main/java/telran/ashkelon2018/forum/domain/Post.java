@@ -4,6 +4,8 @@ import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.EqualsAndHashCode;
@@ -16,6 +18,7 @@ import lombok.ToString;
 @Getter
 @EqualsAndHashCode(of = { "id" })
 @ToString
+@Document(collection = "ForumFilter")
 public class Post {
 	String id;
 	@Setter String title;
